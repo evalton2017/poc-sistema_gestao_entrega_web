@@ -1,0 +1,47 @@
+<mat-card colo="primary">
+  <h3>Filtro</h3>
+  <form [formGroup]="formFiltro">
+    <mat-form-field class="custom-form">
+      <mat-label>Transportadora</mat-label>
+      <mat-select name="idTransportadora" formControlName="idTransportadora">
+        <mat-option
+          *ngFor="let transportadora of transportadoras"
+          [value]="transportadora.id"
+        >
+          {{ transportadora.nome }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Data Inicio</mat-label>
+      <input matInput type="date" formControlName="dataInicio" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Data Fim</mat-label>
+      <input
+        matInput
+        type="date"
+        formControlName="dataFim"
+        (blur)="validarData()"
+      />
+    </mat-form-field>
+    <mat-form-field class="custom-form">
+      <mat-label>Numero Pedido</mat-label>
+      <input
+        matInput
+        maxlength="10"
+        name="numeroPedido"
+        formControlName="numeroPedido"
+        placeholder="Numero Pedido"
+      />
+    </mat-form-field>
+    <div class="example-button-row">
+      <button mat-raised-button color="accent" (click)="pesquisa()" style="margin-right: 2%;">
+        Consultar
+      </button>
+      <button mat-raised-button color="warn" (click)="limpaFiltro()">
+        Limpar
+      </button>
+    </div>
+  </form>
+</mat-card>
