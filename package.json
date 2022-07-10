@@ -10,7 +10,9 @@
     "watch": "ng build --watch --configuration development",
     "e2e": "ng e2e",
     "heroku-postbuild": "ng build --prod",
-    "postinstall": "ng build --aot --prod"
+    "postinstall": "ng build --aot --prod",
+    "logs": "heroku logs --app=poc-web-sge-dev -t",
+    "env": "heroku config --app=poc-web-sge-dev"
   },
   "private": true,
   "dependencies": {
