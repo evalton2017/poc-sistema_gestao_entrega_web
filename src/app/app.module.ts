@@ -19,12 +19,10 @@ import { MatSelectModule } from '@angular/material/select';
 import {MatTableModule} from '@angular/material/table';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatCheckboxModule} from '@angular/material/checkbox';
-import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
   ],
   imports: [
     BrowserModule,

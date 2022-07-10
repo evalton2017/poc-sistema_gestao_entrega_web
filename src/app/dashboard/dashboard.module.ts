@@ -25,6 +25,7 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatCardModule} from '@angular/material/card';
 import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import { NavbarComponent } from '../navbar/navbar.component';
 
 const maskConfig: Partial<IConfig> = {
   validation: false,
@@ -35,7 +36,8 @@ const maskConfig: Partial<IConfig> = {
       DashboardComponent,
       EntregaConcluidaComponent,
       EntregaAtrasoComponent,
-      FiltroComponent
+      FiltroComponent,
+      NavbarComponent
     ],
   imports: [
     CommonModule,

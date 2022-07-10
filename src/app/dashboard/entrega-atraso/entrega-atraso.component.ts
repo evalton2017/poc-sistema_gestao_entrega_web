@@ -45,7 +45,6 @@ export class EntregaAtrasoComponent implements OnInit,AfterViewInit  {
     }
 
     ngAfterViewInit() {
-      console.log(this.paginator)
 
     }
 
@@ -66,7 +65,6 @@ export class EntregaAtrasoComponent implements OnInit,AfterViewInit  {
     this.entregaService.listaEntregaAtrasadas(this.filtro)
      .subscribe({
          next: response => {
-          console.log(response)
              this.loading = false;
              this.dadosEntrega = response;
              this.relatorioEntrega = response.relatorio;

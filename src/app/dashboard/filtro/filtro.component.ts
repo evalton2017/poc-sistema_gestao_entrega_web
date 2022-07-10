@@ -46,7 +46,6 @@ export class FiltroComponent implements OnInit {
 
   pesquisa() {
     this.filtro = this.formFiltro.value;
-    console.log(this.formFiltro.value)
     this.filtros.emit(this.filtro);
   }
 

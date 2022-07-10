@@ -47,7 +47,6 @@ export class EntregaConcluidaComponent implements OnInit, AfterViewInit  {
     }
 
     ngAfterViewInit() {
-      console.log(this.paginator)
 
     }
 
@@ -68,7 +67,6 @@ export class EntregaConcluidaComponent implements OnInit, AfterViewInit  {
     this.entregaService.listaEntregaComFiltro(this.filtro)
      .subscribe({
          next: response => {
-          console.log(response)
              this.loading = false;
              this.dadosEntrega = response;
              this.relatorioEntrega = response.relatorio;
