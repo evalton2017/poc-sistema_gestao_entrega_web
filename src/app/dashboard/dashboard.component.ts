@@ -93,19 +93,19 @@ export class DashboardComponent implements OnInit {
   exibirGraficoConcluida(){
     const el = document.getElementById('grafico_entregas');
     const chart = new google.visualization.PieChart(el);
-    chart.draw(this.obterDataTable(this.dadosEntrega.concluidas), this.obterOpcoes("Entregas Concluídas por Transportadora"));
+    chart.draw(this.obterDataTable(this.dadosEntrega.concluidas), this.obterOpcoes("Entregas concluídas por Transportadora"));
   }
 
   exibirGraficoDevolvido(){
     const el = document.getElementById('grafico_devolucao');
     const chart = new google.visualization.PieChart(el);
-    chart.draw(this.obterDataTable(this.dadosEntrega.emAndamento), this.obterOpcoes("Entregas Devolvidas por Transportadora"));
+    chart.draw(this.obterDataTable(this.dadosEntrega.emAndamento), this.obterOpcoes("Entregas em andamento por Transportadora"));
   }
 
   exibirGraficoAndamento(){
     const el = document.getElementById('grafico_atrasos');
     const chart = new google.visualization.PieChart(el);
-    chart.draw(this.obterDataTable(this.dadosEntrega.devolvidas), this.obterOpcoes("Entregas Devolvida por Transportadora"));
+    chart.draw(this.obterDataTable(this.dadosEntrega.devolvidas), this.obterOpcoes("Entregas em atraso por Transportadora"));
   }
 
 
