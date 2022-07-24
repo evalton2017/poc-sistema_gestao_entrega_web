@@ -3,18 +3,17 @@
 [config]="{ backdropBorderRadius: '3px' }"
 ></ngx-loading>
 <app-navbar></app-navbar>
-
-  <div class="row justify-content-md-center">
+<div class="container">
     <div class="row" style="margin-top: 5%">
-      <div class="md-8">
+      <div class="md-12">
         <div id="grafico_entregas" style="width: 800px; height: 400px;" ></div>
       </div>
 
-      <div class="md-4">
+      <div class="md-12 sx-12">
         <sge-filtro (filtros)="recebeFiltros($event)"></sge-filtro>
       </div>
 
-      <div class="md-8" *ngIf="relatorioEntrega.length >0">
+      <div class="md-12 sx-12" *ngIf="relatorioEntrega.length >0">
             <table mat-table [dataSource]="dataSource">
               <!-- Position Column -->
               <ng-container matColumnDef="transportadora">
