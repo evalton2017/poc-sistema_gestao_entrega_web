@@ -56,7 +56,7 @@ export class LoginComponent implements OnInit {
       },
       error: err =>{
         this.loading = false;
-        let msg: string = err.error.text;
+        let msg: string = "Usuario ou senha inválidos.";
         if(err['status']==401){
           msg = "Email/senha invalidos";
         }
