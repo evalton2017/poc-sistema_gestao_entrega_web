@@ -99,7 +99,7 @@ export class DashboardComponent implements OnInit {
   exibirGraficoDevolvido(){
     const el = document.getElementById('grafico_devolucao');
     const chart = new google.visualization.PieChart(el);
-    chart.draw(this.obterDataTable(this.dadosEntrega.emAndamento), this.obterOpcoes("Entregas Realizadas por Transportadora"));
+    chart.draw(this.obterDataTable(this.dadosEntrega.emAndamento), this.obterOpcoes("Entregas Devolvidas por Transportadora"));
   }
 
   exibirGraficoAndamento(){
