@@ -66,10 +66,12 @@ export class DashboardComponent implements OnInit {
     this.entregaService.listaEntregas()
      .subscribe({
          next: response => {
-             this.loading = false;
-             this.dadosEntrega = response;
-             this.initLocais();
-             this.init();
+          if(response){
+            this.loading = false;
+            this.dadosEntrega = response;
+            this.initLocais();
+            this.init();
+          }
        },
        error: err =>{
          this.loading = false;
