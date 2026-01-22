@@ -38,7 +38,8 @@ export class EntregasService {
 
   listaEntregaAtrasadas(filtro: Filtro) : Observable<DadosEntregaTransportadora>{
     const params = this.getParametros(filtro);
-    return this.http.get<any>(this.URI_ENTREGA+`entregas/atrasos/filtro?${params.toString()}`, this.httpOptions)
+    return this.http.get<any>(this.URI_ENTREGA+`entregas/atrasos/filtro?${params.toString()}`,
+      this.httpOptions)
   }
 
 

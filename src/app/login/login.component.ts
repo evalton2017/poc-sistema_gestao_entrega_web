@@ -50,7 +50,7 @@ export class LoginComponent implements OnInit {
     .subscribe({
         next: response => {
             this.loading = false;
-            localStorage['token'] = response.accesToken;
+            localStorage['token'] = response.token;
             localStorage['user'] = JSON.stringify(response);
             this.router.navigate(['/relatorios/dashboard']);
       },

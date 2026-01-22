@@ -4,10 +4,8 @@
 
 export const environment = {
   production: false,
-  //API_AUTH:'http://localhost:3032/api/',
-  //API_ENTREGA:'http://localhost:9091/api/',
-  API_AUTH:'https://poc-api-auth.herokuapp.com/api/',
-  API_ENTREGA:'https://poc-api-sge.herokuapp.com/api/',
+  API_AUTH:'http://localhost:3032/api/',
+  API_ENTREGA:'http://localhost:9091/api/',
 };
 
 /*

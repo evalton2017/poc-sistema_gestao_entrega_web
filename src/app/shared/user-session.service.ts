@@ -38,7 +38,8 @@ export class UserSessionService {
 
   isAuthenticated(url: string): boolean{
     const dados = this.obterDadosUsuario();
-    if(dados.accesToken){
+
+    if(dados.token){
       return true;
     }
     return false;

@@ -18,6 +18,7 @@ export class AuthService implements CanActivate {
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): boolean {
     const authenticated =  this.usuarioSession.isAuthenticated(state.url);
+
     if(authenticated){
       return true;
     }else{
